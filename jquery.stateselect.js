@@ -12,6 +12,7 @@
  */
 ;(function($) {
     var canadian_provinces = {
+        ''   : 'Please choose a province...',
         'AB' : 'Alberta',
         'BC' : 'British Columbia',
         'MB' : 'Manitoba',
@@ -27,6 +28,7 @@
         'YT' : 'Yukon'
     }
     var us_states = {
+        ''   : 'Please choose a state...',
 	'AL' : 'Alabama',
         'AK' : 'Alaska',
         'AS' : 'American Samoa',
@@ -81,7 +83,7 @@
         'UT' : 'Utah',
         'VT' : 'Vermont',
         'VA' : 'Virginia',
-        'VI' : 'Virgin Islands'
+        'VI' : 'Virgin Islands',
         'WA' : 'Washington',
         'WV' : 'West Virginia',
         'WI' : 'Wisconsin',
@@ -94,10 +96,10 @@
                 var country = $(this).attr('value');
                 $(state_select_id).removeOption(/.*/);
                 switch (country) {
-                    case 'Canada':
+                    case 'CA':
                         $(state_select_id).addOption(canadian_provinces, false);
                         break;
-                    case 'United States':
+                    case 'US':
                         $(state_select_id).addOption(us_states, false);
                         break;
                     default:
